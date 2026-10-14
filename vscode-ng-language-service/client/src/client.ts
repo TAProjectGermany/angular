@@ -74,7 +74,8 @@ export class AngularLanguageClient implements vscode.Disposable {
         // scheme: 'file' means listen to changes to files on disk only
         // other option is 'untitled', for buffer in the editor (like a new doc)
         {scheme: 'file', language: 'html'},
-        {scheme: 'file', language: 'typescript'},
+         // Do not participate in VS Code quick fixes / code actions for TypeScript files.
+        // {scheme: 'file', language: 'typescript'},
       ],
       synchronize: {
         fileEvents,
